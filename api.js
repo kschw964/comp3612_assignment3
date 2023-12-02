@@ -25,11 +25,11 @@ app.get("/api/galleries", (req, resp) => {
 });
 
 app.get("/api/galleries/:country", (req, resp) => {
-  const foundArtists = galleries.filter(
+  const foundGalleries = galleries.filter(
     (gallery) =>
       gallery.GalleryCountry.toLowerCase() == req.params.country.toLowerCase()
   );
-  resp.json(foundArtists);
+  resp.json(foundGalleries);
 });
 
 app.get("/api/paintings", (req, resp) => {
@@ -46,42 +46,42 @@ app.get(paintingPath + "/:id", (req, resp) => {
 });
 
 app.get(paintingPath + "/gallery/:id", (req, resp) => {
-  const foundPainting = paintings.filter(
+  const foundPaintings = paintings.filter(
     (painting) => painting.gallery.galleryID == req.params.id
   );
-  resp.json(foundPainting);
+  resp.json(foundPaintings);
 });
 
 app.get(paintingPath + "/artist/:id", (req, resp) => {
-  const foundPainting = paintings.filter(
+  const foundPaintings = paintings.filter(
     (painting) => painting.artist.artistID == req.params.id
   );
-  resp.json(foundPainting);
+  resp.json(foundPaintings);
 });
 
 app.get(paintingPath + "year/:min/:max", (req, resp) => {
-  const foundPainting = paintings.filter(
+  const foundPaintings = paintings.filter(
     (painting) =>
       painting.yearOfWork >= req.params.min &&
       painting.yearOfWork <= req.params.min
   );
-  resp.json(foundPainting);
+  resp.json(foundPaintings);
 });
 
 app.get(paintingPath + "/title/:text", (req, resp) => {
-  const foundPainting = paintings.filter((painting) =>
+  const foundPaintings = paintings.filter((painting) =>
     painting.title.contains(req.params.text)
   );
-  resp.json(foundPainting);
+  resp.json(foundPaintings);
 });
 
 app.get(paintingPath + "/color/:name", (req, resp) => {
-  const foundPainting = paintings.filter((painting) =>
+  const foundPaintings = paintings.filter((painting) =>
     painting.details.annotation.dominantColors.find(
       (color) => color.name.toLowerCase() == req.params.name.toLowerCase()
     )
   );
-  resp.json(foundPainting);
+  resp.json(foundPaintings);
 });
 
 const port = 8080;
