@@ -1,0 +1,14 @@
+{
+  "name": "comp3612_assignment3",
+  "version": "1.0.0",
+  "description": "An API with paintings, galleries and artists",
+  "main": "api.js",
+  "scripts": {
+    "test": "node api.js"
+  },
+  "author": "kschw964",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
