@@ -3,6 +3,7 @@ const path = require("path");
 const express = require("express");
 
 const artists = getJSONData("artists.json");
+const galleries = getJSONData("galleries.json");
 
 const app = express();
 
@@ -14,6 +15,18 @@ app.get("/api/artists/:country", (req, resp) => {
   const foundArtists = artists.filter(
     (artist) =>
       artist.Nationality.toLowerCase() == req.params.country.toLowerCase()
+  );
+  resp.json(foundArtists);
+});
+
+app.get("/api/galleries", (req, resp) => {
+  resp.json(galleries);
+});
+
+app.get("/api/galleries/:country", (req, resp) => {
+  const foundArtists = galleries.filter(
+    (gallery) =>
+      gallery.GalleryCountry.toLowerCase() == req.params.country.toLowerCase()
   );
   resp.json(foundArtists);
 });
