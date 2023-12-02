@@ -39,7 +39,7 @@ app.get("/api/paintings", (req, resp) => {
 const paintingPath = "/api/painting";
 
 app.get(paintingPath + "/:id", (req, resp) => {
-  const foundPainting = paintings.filter(
+  const foundPainting = paintings.find(
     (painting) => painting.paintingID == req.params.id
   );
   resp.json(foundPainting);
