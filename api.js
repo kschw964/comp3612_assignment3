@@ -2,41 +2,12 @@ const express = require("express");
 
 const { artists, galleries, paintings } = require("./dataProvider.js");
 
+const artistsAPI = require("./artistsAPI.js");
+
 const app = express();
 
-app.get("/api/artists", (req, resp) => {
-  resp.json(artists);
-});
-
-app.get("/api/artists/:country", (req, resp) => {
-  const foundArtists = artists.filter(
-    (artist) =>
-      artist.Nationality.toLowerCase() == req.params.country.toLowerCase()
-  );
-  if (foundArtists) resp.json(foundArtists);
-  else
-    sendNotFoundResponse(
-      resp,
-      "No artist with nationality of " + req.params.country + " found"
-    );
-});
-
-app.get("/api/galleries", (req, resp) => {
-  resp.json(galleries);
-});
-
-app.get("/api/galleries/:country", (req, resp) => {
-  const foundGalleries = galleries.filter(
-    (gallery) =>
-      gallery.GalleryCountry.toLowerCase() == req.params.country.toLowerCase()
-  );
-  if (foundGalleries) resp.json(foundGalleries);
-  else
-    sendNotFoundResponse(
-      resp,
-      "No gallery in " + req.params.country + " found"
-    );
-});
+artistsAPI.handleAll(app, artists);
+artistsAPI.handleArtistsFromCountry(app, artists);
 
 app.get("/api/paintings", (req, resp) => {
   resp.json(paintings);
