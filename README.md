@@ -1,20 +1,20 @@
-https://kschw964-assignment3.glitch.me/api/paintings
-https://kschw964-assignment3.glitch.me/api/painting/433
-https://kschw964-assignment3.glitch.me/api/painting/43374534856
-https://kschw964-assignment3.glitch.me/api/painting/gallery/7
-https://kschw964-assignment3.glitch.me/api/painting/gallery/43374534856
-https://kschw964-assignment3.glitch.me/api/painting/artist/106
-https://kschw964-assignment3.glitch.me/api/painting/artist/43374534856
-https://kschw964-assignment3.glitch.me/api/painting/year/1850/1900
-https://kschw964-assignment3.glitch.me/api/painting/year/2200/2400
-https://kschw964-assignment3.glitch.me/api/painting/title/self
-https://kschw964-assignment3.glitch.me/api/painting/title/dfjkghdfkgh
-https://kschw964-assignment3.glitch.me/api/painting/color/NAPA
-https://kschw964-assignment3.glitch.me/api/painting/color/coffee%20bean
-https://kschw964-assignment3.glitch.me/api/painting/color/kcvhvxchbkcj
-https://kschw964-assignment3.glitch.me/api/artists
-https://kschw964-assignment3.glitch.me/api/artists/Netherlands
-https://kschw964-assignment3.glitch.me/api/artists/sdfjjsdf
-https://kschw964-assignment3.glitch.me/api/galleries
-https://kschw964-assignment3.glitch.me/api/galleries/france
-https://kschw964-assignment3.glitch.me/api/galleries/kcvhvxchbkcj
+- https://kschw964-assignment3.glitch.me/api/paintings
+- https://kschw964-assignment3.glitch.me/api/painting/433
+- https://kschw964-assignment3.glitch.me/api/painting/43374534856
+- https://kschw964-assignment3.glitch.me/api/painting/gallery/7
+- https://kschw964-assignment3.glitch.me/api/painting/gallery/43374534856
+- https://kschw964-assignment3.glitch.me/api/painting/artist/106
+- https://kschw964-assignment3.glitch.me/api/painting/artist/43374534856
+- https://kschw964-assignment3.glitch.me/api/painting/year/1850/1900
+- https://kschw964-assignment3.glitch.me/api/painting/year/2200/2400
+- https://kschw964-assignment3.glitch.me/api/painting/title/self
+- https://kschw964-assignment3.glitch.me/api/painting/title/dfjkghdfkgh
+- https://kschw964-assignment3.glitch.me/api/painting/color/NAPA
+- https://kschw964-assignment3.glitch.me/api/painting/color/coffee%20bean
+- https://kschw964-assignment3.glitch.me/api/painting/color/kcvhvxchbkcj
+- https://kschw964-assignment3.glitch.me/api/artists
+- https://kschw964-assignment3.glitch.me/api/artists/Netherlands
+- https://kschw964-assignment3.glitch.me/api/artists/sdfjjsdf
+- https://kschw964-assignment3.glitch.me/api/galleries
+- https://kschw964-assignment3.glitch.me/api/galleries/france
+- https://kschw964-assignment3.glitch.me/api/galleries/kcvhvxchbkcj
