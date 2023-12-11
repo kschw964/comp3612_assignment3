@@ -1,10 +1,6 @@
-const fs = require("fs");
-const path = require("path");
 const express = require("express");
 
-const artists = getJSONData("artists.json");
-const galleries = getJSONData("galleries.json");
-const paintings = getJSONData("paintings-nested.json");
+const { artists, galleries, paintings } = require("./dataProvider.js");
 
 const app = express();
 
@@ -132,12 +128,6 @@ const port = 8080;
 app.listen(port, () => {
   console.log("Running on port: " + port);
 });
-
-function getJSONData(filename) {
-  const pathToFile = path.join(__dirname, "data", filename);
-  const fileContent = fs.readFileSync(pathToFile, "utf8");
-  return JSON.parse(fileContent);
-}
 
 function sendNotFoundResponse(resp, message) {
   resp.json({ error: "Requested item(s) not found", details: message });
