@@ -3,11 +3,15 @@ const express = require("express");
 const { artists, galleries, paintings } = require("./dataProvider.js");
 
 const artistsAPI = require("./artistsAPI.js");
+const galleriesAPI = require("./galleriesAPI.js");
 
 const app = express();
 
 artistsAPI.handleAll(app, artists);
 artistsAPI.handleArtistsFromCountry(app, artists);
+
+galleriesAPI.handleAll(app, galleries);
+galleriesAPI.handleGalleriesInCountry(app, galleries);
 
 app.get("/api/paintings", (req, resp) => {
   resp.json(paintings);
