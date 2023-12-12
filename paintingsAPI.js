@@ -48,7 +48,7 @@ function handlePaintingsFromArtistWithID(app, paintings) {
 }
 
 function handlePaintingsWithinTimeperiod(app, paintings) {
-  app.get(paintingPath + "year/:min/:max", (req, resp) => {
+  app.get(paintingPath + "/year/:min/:max", (req, resp) => {
     const foundPaintings = paintings.filter(
       (painting) =>
         painting.yearOfWork >= req.params.min &&
@@ -70,7 +70,7 @@ function handlePaintingsWithinTimeperiod(app, paintings) {
 function handlePaintingsWithTitle(app, paintings) {
   app.get(paintingPath + "/title/:text", (req, resp) => {
     const foundPaintings = paintings.filter((painting) =>
-      painting.title.contains(req.params.text)
+      painting.title.includes(req.params.text)
     );
     if (foundPaintings.length) resp.json(foundPaintings);
     else
