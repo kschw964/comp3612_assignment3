@@ -52,7 +52,7 @@ function handlePaintingsWithinTimeperiod(app, paintings) {
     const foundPaintings = paintings.filter(
       (painting) =>
         painting.yearOfWork >= req.params.min &&
-        painting.yearOfWork <= req.params.min
+        painting.yearOfWork <= req.params.max
     );
     if (foundPaintings.length) resp.json(foundPaintings);
     else
